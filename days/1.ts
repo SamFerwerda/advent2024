@@ -1,11 +1,11 @@
 import { readFile } from "../common/utils.ts";
 
-export function human(){
+export function human(test){
     let list1: number[] = [];
     let list2: number[] = [];
     
     // read lists
-    readFile('1').forEach((line: string) => {
+    readFile('1', test).forEach((line: string) => {
         const [id1, id2] = line.split('   ');
         list1.push(parseInt(id1));
         list2.push(parseInt(id2));
